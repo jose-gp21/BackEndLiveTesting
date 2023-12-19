@@ -5,7 +5,7 @@ const app = express();
 const productRouter = require('./routes/products');
 const authRouter = require('./routes/auth');
 const userRouter = require('./routes/user');
-//const orderRouter = require('./routes/order');
+const orderRouter = require('./routes/order');
 const cartRouter = require('./routes/cart');
 const port = 3000
 
@@ -19,6 +19,7 @@ app.use('/api/products', productRouter);
 app.use('/api/auth', authRouter);
 app.use('/api/users', userRouter);
 app.use('/api/cart', cartRouter);
+app.use('/api/order', orderRouter)
 
 
 app.listen(process.env.PORT || port, () => console.log(`Example app listening on port ${process.env.PORT}!`))
